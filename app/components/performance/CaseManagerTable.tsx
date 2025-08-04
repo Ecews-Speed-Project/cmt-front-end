@@ -4,7 +4,7 @@ interface CaseManagerTableProps {
   data: CaseManagerPerformance[];
   isLoading: boolean;
   error: string | null;
-  onSelectManager: (manager: CaseManager) => void;
+  onSelectManager: (manager: CaseManagerPerformance) => void;
   searchQuery: string;
   selectedTeamId: string | number;
 }
@@ -66,7 +66,7 @@ export default function CaseManagerTable({ data, isLoading, error, onSelectManag
           </tr>
         ) : (
           filteredData.map((manager) => (
-            <tr key={manager.case_manager.cm_id} onClick={() => onSelectManager(manager.case_manager)} className="cursor-pointer hover:bg-gray-50">
+            <tr key={manager.case_manager.cm_id} onClick={() => onSelectManager(manager)} className="cursor-pointer hover:bg-gray-50">
               <td className="px-6 py-3 text-center text-sm font-medium text-gray-500">
                 {manager.case_manager.fullname}
               </td>

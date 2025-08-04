@@ -1,5 +1,3 @@
-import { FaTimes, FaCalendarCheck, FaVial } from 'react-icons/fa';
-import { FaUserGroup } from 'react-icons/fa6';
 import { CaseManagerPerformance } from '@/app/types/case_manager';
 import { CMTPerformanceData } from '@/app/types/cmt';
 
@@ -105,7 +103,7 @@ export default function PerformanceModal({ isOpen, onClose, data, type }: Perfor
     >
       <div 
         className="bg-white rounded-xl shadow-xl max-w-6xl w-full mx-4 max-h-[90vh] overflow-y-auto"
-        onClick={(e) => e.stopPropagation()}
+        onClick={(e: React.MouseEvent<HTMLDivElement>) => e.stopPropagation()}
       >
         <div className="p-8 space-y-8">
           {/* Header with close button */}
@@ -133,7 +131,7 @@ export default function PerformanceModal({ isOpen, onClose, data, type }: Perfor
               className="text-gray-400 hover:text-gray-500 p-2"
               aria-label="Close modal"
             >
-              <FaTimes className="h-5 w-5" />
+              <i className="fa-solid fa-times h-5 w-5" />
             </button>
           </div>
 
@@ -160,7 +158,7 @@ export default function PerformanceModal({ isOpen, onClose, data, type }: Perfor
             <div className="bg-white rounded-xl shadow-sm border overflow-hidden">
               <div className="px-6 py-4 bg-purple-50 border-b">
                 <h3 className="text-lg font-semibold text-purple-700 flex items-center gap-2">
-                  <FaUserGroup className="h-5 w-5" />
+                  <i className="fa-solid fa-users h-5 w-5" />
                   Patient Status
                 </h3>
               </div>
@@ -194,7 +192,7 @@ export default function PerformanceModal({ isOpen, onClose, data, type }: Perfor
             <div className="bg-white rounded-xl shadow-sm border overflow-hidden">
               <div className="px-6 py-4 bg-blue-50 border-b">
                 <h3 className="text-lg font-semibold text-blue-700 flex items-center gap-2">
-                  <FaCalendarCheck className="h-5 w-5" />
+                  <i className="fa-solid fa-calendar-check h-5 w-5" />
                   Appointments
                 </h3>
               </div>
@@ -226,7 +224,7 @@ export default function PerformanceModal({ isOpen, onClose, data, type }: Perfor
             <div className="bg-white rounded-xl shadow-sm border overflow-hidden">
               <div className="px-6 py-4 bg-green-50 border-b">
                 <h3 className="text-lg font-semibold text-green-700 flex items-center gap-2">
-                  <FaVial className="h-5 w-5" />
+                  <i className="fa-solid fa-vial h-5 w-5" />
                   Viral Load Management
                 </h3>
               </div>
