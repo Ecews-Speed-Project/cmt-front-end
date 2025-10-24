@@ -25,6 +25,7 @@ export interface CMPerformance {
     transferred_out: number;
     tx_cur: number;
     updated_date: string; // Consider using Date type if you parse it
+    fy_viral_load_eligible: number;
     viral_load_eligible: number;
     viral_load_results: number;
     viral_load_samples: number;

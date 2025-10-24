@@ -5,6 +5,7 @@ interface Appointments {
 }
 
 interface ViralLoad {
+    fy_eligible: number;
     eligible: number;
     samples: number;
     results: number;
